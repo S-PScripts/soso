@@ -1,0 +1,23 @@
+// Open a new about:blank window/tab
+const newWindow = window.open('about:blank');
+
+// Define your custom HTML
+const htmlContent = `
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>My Custom About:Blank Page</title>
+      <style>
+        body { font-family: sans-serif; margin: 2em; }
+      </style>
+    </head>
+    <body>
+      <h1>Welcome!</h1>
+      <p>This is your custom content on about:blank.</p>
+    </body>
+  </html>
+`;
+
+// Write the HTML into the new window
+newWindow.document.write(htmlContent);
+newWindow.document.close();
