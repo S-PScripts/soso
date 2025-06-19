@@ -12,10 +12,17 @@
       blankTab.document.write(`
         <!DOCTYPE html>
         <html>
-          <head><title>Custom Blank</title></head>
+          <head>
+            <title>Custom Blank</title>
+            <style>
+              body { font-family: sans-serif; margin: 2em; }
+              iframe { width: 100%; height: 500px; border: 1px solid #ccc; }
+            </style>
+          </head>
           <body>
             <h1>Hello!</h1>
-            <p>This is your custom about:blank.</p>
+            <p>This is a custom about:blank with chromebook-utilities.pages.dev embedded.</p>
+            <iframe src="https://chromebook-utilities.pages.dev"></iframe>
           </body>
         </html>
       `);
