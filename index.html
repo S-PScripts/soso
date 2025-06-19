@@ -1,23 +1,25 @@
-// Open a new about:blank window/tab
-const newWindow = window.open('about:blank');
-
-// Define your custom HTML
-const htmlContent = `
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <title>My Custom About:Blank Page</title>
-      <style>
-        body { font-family: sans-serif; margin: 2em; }
-      </style>
-    </head>
-    <body>
-      <h1>Welcome!</h1>
-      <p>This is your custom content on about:blank.</p>
-    </body>
-  </html>
-`;
-
-// Write the HTML into the new window
-newWindow.document.write(htmlContent);
-newWindow.document.close();
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test</title>
+</head>
+<body>
+  <button onclick="openTabs()">Click Me!</button>
+  <script>
+    function openTabs() {
+      window.open('https://www.dictionary.com', '_blank');
+      const blankTab = window.open('about:blank');
+      blankTab.document.write(`
+        <!DOCTYPE html>
+        <html>
+          <head><title>Custom Blank</title></head>
+          <body>
+            <h1>Hello!</h1>
+            <p>This is your custom about:blank.</p>
+          </body>
+        </html>
+      `);
+    }
+  </script>
+</body>
+</html>
