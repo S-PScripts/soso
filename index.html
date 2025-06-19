@@ -12,10 +12,27 @@
       blankTab.document.write(`
         <!DOCTYPE html>
         <html>
-          <head><title>Custom Blank</title></head>
+          <head>
+            <title>Custom Blank</title>
+            <style>
+              body { font-family: sans-serif; margin: 2em; }
+              .url-box { width: 300px; padding: 8px; font-size: 16px; }
+              .go-button { padding: 8px 16px; font-size: 16px; }
+            </style>
+          </head>
           <body>
             <h1>Hello!</h1>
             <p>This is your custom about:blank.</p>
+            <input type="text" class="url-box" placeholder="Enter a URL (e.g., https://example.com)">
+            <button class="go-button" onclick="goToUrl()">Go</button>
+            <script>
+              function goToUrl() {
+                const url = document.querySelector('.url-box').value;
+                if (url.trim()) {
+                  window.location.href = url;
+                }
+              }
+            </script>
           </body>
         </html>
       `);
